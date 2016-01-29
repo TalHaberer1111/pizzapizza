@@ -60,7 +60,7 @@ $(document).ready(function() {
 		newPizza = new Pizza(selectedSize, selectedCheese, topping);
 		newpizzaPrice = newPizza.price();
 
-		$("span#finalPrice").write(newpizzaPrice);
+		$("span#finalPrice").append(newpizzaPrice);
 
 	});
 });
