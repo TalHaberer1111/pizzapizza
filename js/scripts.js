@@ -7,17 +7,17 @@ function Pizza(size, cheese, topping) {
 Pizza.prototype.price = function() {
 
 
-	var pizzaPrice = 5;
+	var pizzaPrice = 8;
 
 	if (
-		this.size === "Small" ||
-		this.size === "Medium" ||
-		this.size === "Large" ||
-		this.size === "Xlarge"
+		this.size === "Medium"
 		) {
 		pizzaPrice += 6;
-	} else if (this.size === "Slice") {
-		pizzaPrice += 0;
+	} else if (
+    this.size === "Large" ||
+    this.size === "Xlarge"
+  ) {
+		pizzaPrice += 10;
 	}
 
 
@@ -30,7 +30,7 @@ Pizza.prototype.price = function() {
 	if (this.topping === true) {
 		pizzaPrice +=3;
 	} else if (this.topping === false) {
-		pizzaPrice += 0;
+		pizzaPrice += 3;
 	}
 
 	return pizzaPrice;
